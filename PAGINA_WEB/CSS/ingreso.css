@@ -1,0 +1,339 @@
+ /* Media Query para pantallas muy pequeñas (teléfonos móviles) */
+ @media (max-width: 600px) {
+    body {
+        font-size: 14px; /* Tamaño de fuente más pequeño para móviles */
+    }
+
+    .container {
+        padding: 10px; /* Menos padding en pantallas pequeñas */
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    p {
+        font-size: 0.9em; /* Reduce el tamaño del texto */
+    }
+
+    /* Cambiar disposición de los elementos si es necesario */
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Media Query para pantallas pequeñas a medianas (tabletas) */
+@media (max-width: 1024px) {
+    body {
+        font-size: 16px; /* Tamaño de fuente moderado */
+    }
+
+    .container {
+        padding: 20px; /* Padding estándar */
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.7em;
+    }
+
+    p {
+        font-size: 1em; /* Texto legible */
+    }
+
+    .flex-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .item {
+        flex-basis: 48%; /* Dos elementos por fila */
+        margin-bottom: 20px;
+    }
+}
+
+/* Media Query para pantallas grandes (monitores) */
+@media (min-width: 1025px) {
+    body {
+        font-size: 18px; /* Tamaño de fuente más grande para monitores */
+    }
+
+    .container {
+        padding: 30px; /* Más espacio alrededor del contenido */
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1.1em; /* Texto grande y legible */
+    }
+
+    .flex-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .item {
+        flex-basis: 22%; /* Cuatro elementos por fila */
+    }
+}
+
+/* Media Query para pantallas muy grandes (TVs o pantallas ultra anchas) */
+@media (min-width: 1600px) {
+    body {
+        font-size: 20px; /* Mayor tamaño de texto para pantallas grandes */
+    }
+
+    .container {
+        padding: 40px; /* Mucho más padding */
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        font-size: 2.5em;
+    }
+
+    p {
+        font-size: 1.2em; /* Texto aún más grande */
+    }
+
+    .flex-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 30px;
+    }
+
+    .item {
+        flex-basis: 22%; /* Mantén 4 elementos por fila */
+    }
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+}
+
+
+
+img:hover
+{
+    transform: scale(1.10);
+}
+
+img 
+{
+
+    margin: 10px 80px;
+}
+nav .busqueda{
+margin: 20px 50px;
+justify-content: center;
+position: relative;
+}
+nav {
+    display: flex;
+    background-color: #ff5722;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+nav .item 
+{
+    align-items: center;
+    font-weight: bolder;
+    position: relative;
+    margin:  0 25px ;
+    cursor: pointer;
+    text-align: center;
+}
+nav .item a 
+{
+    justify-items: auto;
+}
+
+nav .item:hover > .dropdown > div
+{
+    translate: 0;
+}
+.dropdown > div
+{
+    background-color: rgba(0, 0, 0, 0.653);
+    translate: 0 -100%;
+    transition:  0.5s 0.1s;
+    position: relative;
+    z-index: 100;
+}
+
+.dropdown
+{
+    overflow: hidden;
+    list-style: none;
+    position: absolute;
+    padding: 0;
+    width: 100%;
+    left: 0;
+    top: 62px;
+    border-radius: 15px;
+}
+
+.dropdown a
+{
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 0;
+    width: 100%;
+    height: 40px;
+    line-height: 50px;
+}
+
+
+.underline
+{
+    height: 6px;
+    background: var(--color-primario);
+    position: absolute;
+    bottom: 0;
+    border-radius: 15px;
+    width: 25%;
+    z-index: 2;
+    pointer-events: none;
+    transition: 0.35s;
+}
+
+.formulario-container {
+    margin: 2px;
+    border: 2px solid #ff5722;
+    border-radius: 8px;
+    padding: 20px;
+    width: 95%;
+    max-width: 96.9%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 500px;
+}
+
+.formulario-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fffdfd;
+}
+
+.formulario-group {
+    margin-bottom: 15px;
+}
+
+.formulario-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.formulario-group input {
+    width: 99%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.formulario-group input[type="checkbox"] {
+    width: auto;
+}
+
+.formulario-group .checkbox-label {
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 14px;
+}
+
+.formulario-boton {
+    display: flex;
+    justify-content: center;
+}
+
+.formulario-boton button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.formulario-boton button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: rgb(51, 51, 55);
+    padding: 30px 20px; 
+    color: #f1f1f1;
+    text-align: center; 
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mensaje {
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.1); 
+    border-radius: 5px; 
+    margin-bottom: 20px;
+    color: #fff; 
+}
+
+.redes {
+    display: flex; 
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+.social-icon {
+    margin: 0 15px; 
+    padding: 12px; 
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px; 
+    transition: all 0.3s ease-in-out; 
+}
+
+
+.social-icon:hover {
+    transform: scale(1.1); 
+    color: rgba(243, 239, 234, 0.992); 
+    background-color: rgba(135, 134, 134, 0.2); 
+}
+
+
+i:hover {
+    transform: scale(1.15);
+}
